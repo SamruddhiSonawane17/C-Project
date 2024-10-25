@@ -1,0 +1,68 @@
+#include<iostream>
+ using namespace std;
+ class fee
+{
+public:
+string student_name;
+string department;
+int roll_no;
+ int year, mobile_no;
+int category;
+float total_fee;
+void putdata()
+{
+cout<<"enter student name: "<<endl;
+cin>>student_name;
+cout<<"enter class or department:"<<endl;
+cin>>department;
+cout<<"enter student roll number:"<<endl;
+cin>>roll_no;
+cout<<"enter present year:"<<endl;
+cin>>year;
+cout<<"enter mobile number: "<<endl;
+cin>>mobile_no;
+cout<<" enter category:"<<endl;
+cin>>category;
+cout<<"enter total fees: "<<endl;
+cin>>total_fee;
+ }
+void getdata()
+{
+cout<<"student name:"<<student_name<<endl; 
+cout<<"class/department:"<<department<<endl; 
+cout<<"roll number:"<<roll_no<<endl;
+cout<<"year: "<<year<<endl;
+cout<<"mobile number: "<<mobile_no<<endl;
+cout<<" Category:"<<category<<endl;
+cout<<"total fees:"<<total_fee<<endl;
+ }
+};
+class payment: public fee
+{
+public:
+ float paid;
+float pending;
+void putfeesdata()
+{
+cout<<"enter paid fee:"<<endl;
+cin>>paid;
+cout<<"enter pending fee: "<<endl;
+ cin>>pending;
+}
+ void getfeesdata()
+{
+cout<<"paid fee:"<<paid<<endl;
+cout<<"pending fee:"<<pending<<endl;
+ }
+};
+
+int main()
+{
+fee f1;
+f1.putdata();
+f1.getdata();
+payment p1;
+p1.putfeesdata();
+p1.getfeesdata();
+return 0;
+}
